@@ -1,4 +1,4 @@
-# Portfolio webpage of Lynn Pham
+# Portfolio webpage
 
 still working on it..
 
