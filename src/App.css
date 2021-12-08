@@ -36,10 +36,23 @@
   color: white;
 }
 
+h1 {
+  color: white;
+  text-align: center;
+}
 .box{
   background-color: white;
   width: 500px;
   /* border: 15px solid green; */
   padding: 500px;
   margin: 20px;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rosybrown;
+  color: white;
+  text-align: center;
 }
