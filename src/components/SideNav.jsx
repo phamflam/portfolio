@@ -52,7 +52,7 @@ class SideNav extends React.Component {
     return (
       <React.Fragment>
         <span onClick={this.openNavClick} className="open-nav">
-          &#9776; open
+        &#9776;open 
         </span>
         <div
           onClick={this.navCoverClick}
@@ -67,7 +67,7 @@ class SideNav extends React.Component {
           <a href="#about">ABOUT</a>
           <a href="#projects">PROJECTS</a>
           <a href="#contact">CONTACT</a>
-          <button className="button" onClick={this.darkMode}>darkmode </button>
+          <button className="button-darkmode" onClick={this.darkMode}>darkmode</button>
         </div>
       </React.Fragment>
     )

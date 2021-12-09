@@ -25,11 +25,14 @@ class App extends Component {
         </div>
         {/* <div className="box"></div> */}
         <div id="about" className="screen" >
+          <h3>ABOUT.</h3>
+
           I study applied computer science at HTW Berlin.
           <br />        <br />
         </div>
 
         <div id="projects" className="screen">
+          <h3>PROJECTS.</h3>
           You can find most of my projects on   <a className="link" href="https://github.com/phamflam" target="_blank" rel="noopener noreferrer" >GitHub</a>.
           <br />  <br />
 
@@ -61,16 +64,19 @@ class App extends Component {
           </video>
         </div>
         <div id="contact" className="screen">
-          Contact me: <br />
-          <a href="mailto: lynnphamthu@gmail.com" target="_blank" rel="noopener noreferrer" className="icon">Email</a> <br />
-          <a href="https://github.com/phamflam" target="_blank" rel="noopener noreferrer">
+          <h3>CONTACT.</h3>
+          Contact me: <br /> <br />
+          <a style={{ "padding-right": 30 }} href="mailto: lynnphamthu@gmail.com" target="_blank" rel="noopener noreferrer" className="icon">Email</a>
+          {/* <br /> */}
+          <a style={{ "padding-right": 30 }} href="https://github.com/phamflam" target="_blank" rel="noopener noreferrer">
             <img className="icon" alt="GitHub" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" />
-          </a> <br />
-          <a href="https://www.linkedin.com/in/lynn-pham-841876212/" target="_blank" rel="noopener noreferrer">
+          </a>
+          {/* <br /> */}
+          <a style={{ "padding-right": 30 }} href="https://www.linkedin.com/in/lynn-pham-841876212/" target="_blank" rel="noopener noreferrer">
             <img className="icon" alt="LinkedIn" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" />
           </a>
         </div>
-
+        <br />
         <footer className="footer">
           favicon made by melina
         </footer>
