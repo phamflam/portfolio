@@ -47,6 +47,8 @@
   background: transparent;
   color: white;
   border: transparent;
+  cursor: pointer;
+
 }
 
 .site-wrapper {
@@ -54,8 +56,9 @@
 }
 
 .open-nav {
-  font-size: 2rem;
+  font-size: 1rem;
   cursor: pointer;
+  position: fixed;
 }
 @media screen and (max-height: 450px) {
   .side-nav {padding-top: 15px;}

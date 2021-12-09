@@ -1,7 +1,8 @@
 .screen{
   color:white;
   font-size: x-large;
-  margin-left: 160px; /* Same as the width of the sidenav */
+  margin-left: 50px;/*  Same as the width of the sidenav */
+  /* text-align:left; */
   padding: 0px 10px;
 }
 .opennav{
@@ -12,8 +13,18 @@
   height:50px;
 }
 .image{
-   width: 80%;
-  height: auto;
+  /* width: 80%;
+  height: auto; */
+  padding-right: 40px;
+  /* border: 2px solid lightgoldenrodyellow; */
+  width: 20%; 
+  height:20%;
+}
+
+.gif{
+  padding-right: 40px;
+  width: 20%; 
+  height:20%;
 }
 .button {
   border: none;
@@ -38,8 +49,37 @@
 
 h1 {
   color: white;
-  text-align: center;
+  animation-duration: 3s;
+  animation-name: slidein;
+  text-align: left;
 }
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+ to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+h2 {
+  color: lightgray;
+  animation-duration: 3s;
+  animation-name: change-color;
+  text-align: left;
+  animation-iteration-count: 3;
+
+}
+
+@keyframes change-color {
+  0%   {color: lightgray;}
+  25%  {color: lightgoldenrodyellow;}
+  50%  {color: lightpink;}
+  100% {color: lightsalmon;}
+}
+
 .box{
   background-color: white;
   width: 500px;
