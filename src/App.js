@@ -38,6 +38,9 @@ class App extends Component {
 
           Contacts manager application with React.js Node.js Express.js and MongoDB. (module: webapplication development, 4rd semester)
           <h2>Coming soon.</h2>
+          <a href='https://github.com/phamflam/LYPH-WAD2021' target="_blank" rel="noopener noreferrer">View on Github</a>
+          <br />
+          <br />
           Viewer for whole slide images. (module: introduction to health informatics, 3rd semester)
           <h2>Coming soon.</h2>
           Mitosis detection with python jupyter notebooks (module: medical image processing, 4th semester)
@@ -50,16 +53,16 @@ class App extends Component {
           <a href="https://github.com/phamflam/happy-pengu-surf" target="_blank" rel="noopener noreferrer"><img className="image" alt="Unity_2" src={game} /></a>
           written in C# and deployed for Android.
           <br /> <br />
-          <video className="gif" autoPlay loop>
+          <video className="gif" playsInline autoPlay muted loop>
             <source src={surfdemo_1} type="video/mp4"></source>
           </video>
-          <video className="gif" autoPlay loop>
+          <video className="gif" playsInline autoPlay muted loop>
             <source src={surfdemo_2} type="video/mp4"></source>
           </video>
-          <video className="gif" autoPlay loop>
+          <video className="gif" playsInline autoPlay muted loop>
             <source src={surfdemo_3} type="video/mp4"></source>
           </video>
-          <video className="gif" autoPlay loop>
+          <video className="gif" playsInline autoPlay muted loop>
             <source src={surfdemo_4} type="video/mp4"></source>
           </video>
         </div>
