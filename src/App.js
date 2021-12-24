@@ -56,17 +56,18 @@ class App extends Component {
           </a>
           <br /> <br />
           Contacts manager application with React.js Node.js Express.js and MongoDB. (module: webapplication development, 4th semester)
+          <br />
           <a href='https://github.com/phamflam/LYPH-WAD2021' target="_blank" rel="noopener noreferrer">
-            <br />view on Github</a>
+            <br /><img className="img" alt="WAD" src="https://user-images.githubusercontent.com/63077827/145820729-1172c3e1-83a2-4c9d-b7da-a6f4ec61e7e7.png" /></a>
           <br />
           <br />
           Mitosis detection with python jupyter notebooks (module: medical image processing, 4th semester)
           <br />
           <br />
           <a href='https://github.com/phamflam/mitosis-detection/blob/master/mitosis_counter.ipynb' target="_blank" rel="noopener noreferrer">
-            <img className="" alt="mitosis_5" src={mitosis_5} />
-            <img className="" alt="mitosis_2" src={mitosis_2} />
-            <img className="" alt="mitosis_0" src={mitosis_0} />
+            <img className="img" alt="mitosis_5" src={mitosis_5} />
+            <img className="img" alt="mitosis_2" src={mitosis_2} />
+            <img className="img" alt="mitosis_0" src={mitosis_0} />
           </a>
           <br />
           <br />

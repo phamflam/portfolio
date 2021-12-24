@@ -27,6 +27,10 @@
   height:20%;
 }
 
+.img{
+ width: 90%; 
+  height:90%;
+}
 li{
 text-shadow: darkgrey;
 }
