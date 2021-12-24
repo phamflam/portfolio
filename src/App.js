@@ -7,6 +7,9 @@ import surfdemo_1 from "./images/surfdemo_1.mp4"
 import surfdemo_2 from "./images/surfdemo_2.mp4"
 import surfdemo_3 from "./images/surfdemo_3.mp4"
 import surfdemo_4 from "./images/surfdemo_4.mp4"
+import mitosis_0 from "./images/mitosis_0.png"
+import mitosis_2 from "./images/mitosis_2.png"
+import mitosis_5 from "./images/mitosis_5.png"
 
 // import gude from "./images/gudetama.png"
 // import pengulynn from "../public/favicon.ico"
@@ -26,6 +29,52 @@ class App extends Component {
           </div>
         </div>
         {/* <div className="box"></div> */}
+        <div id="projects" className="screen">
+          <h2>PROJECTS.</h2>
+          You can find most of my projects on   <a className="link" href="https://github.com/phamflam" target="_blank" rel="noopener noreferrer" >GitHub</a>.
+          <br />  <br />
+          <p>Unity game for module computer graphics (4th semester)<br />written in C# and deployed for Android.</p>
+          <a href="https://github.com/phamflam/happy-pengu-surf" target="_blank" rel="noopener noreferrer">
+            <video className="gif" playsInline autoPlay muted loop>
+              <source src={surfdemo_1} type="video/mp4"></source>
+            </video>
+          </a>
+          <a href="https://github.com/phamflam/happy-pengu-surf" target="_blank" rel="noopener noreferrer">
+            <video className="gif" playsInline autoPlay muted loop>
+              <source src={surfdemo_2} type="video/mp4"></source>
+            </video>
+          </a>
+          <a href="https://github.com/phamflam/happy-pengu-surf" target="_blank" rel="noopener noreferrer">
+            <video className="gif" playsInline autoPlay muted loop>
+              <source src={surfdemo_3} type="video/mp4"></source>
+            </video>
+          </a>
+          <a href="https://github.com/phamflam/happy-pengu-surf" target="_blank" rel="noopener noreferrer">
+            <video className="gif" playsInline autoPlay muted loop>
+              <source src={surfdemo_4} type="video/mp4"></source>
+            </video>
+          </a>
+          <br /> <br />
+          Contacts manager application with React.js Node.js Express.js and MongoDB. (module: webapplication development, 4th semester)
+          <a href='https://github.com/phamflam/LYPH-WAD2021' target="_blank" rel="noopener noreferrer">
+            <br />view on Github</a>
+          <br />
+          <br />
+          Mitosis detection with python jupyter notebooks (module: medical image processing, 4th semester)
+          <br />
+          <br />
+          <a href='https://github.com/phamflam/mitosis-detection/blob/master/mitosis_counter.ipynb' target="_blank" rel="noopener noreferrer">
+            <img className="" alt="mitosis_5" src={mitosis_5} />
+            <img className="" alt="mitosis_2" src={mitosis_2} />
+            <img className="" alt="mitosis_0" src={mitosis_0} />
+          </a>
+          <br />
+          <br />
+          Viewer for whole slide images.(module: introduction to health informatics, 3rd semester)
+          <h3>Coming soon.</h3>
+          Next generation sequencing (module: health informatics, 5th semester)
+          <h3>Coming soon.</h3>
+        </div>
         <div id="about" className="screen" >
           <h2>ABOUT.</h2>
           I study applied computer science at HTW Berlin.
@@ -70,49 +119,6 @@ class App extends Component {
             <p>League of Legends and Teamfight Tactics!</p>
           </ul>
           {/* <br />        <br /> */}
-
-        </div>
-
-        <div id="projects" className="screen">
-          <h2>PROJECTS.</h2>
-          You can find most of my projects on   <a className="link" href="https://github.com/phamflam" target="_blank" rel="noopener noreferrer" >GitHub</a>.
-          <br />  <br />
-
-          Contacts manager application with React.js Node.js Express.js and MongoDB. (module: webapplication development, 4 semester)
-          <a href='https://github.com/phamflam/LYPH-WAD2021' target="_blank" rel="noopener noreferrer">
-            <br />view on Github</a>
-          <br />
-          <br />
-          Viewer for whole slide images. (module: introduction to health informatics, 3rd semester)
-          <h3>Coming soon.</h3>
-          Mitosis detection with python jupyter notebooks (module: medical image processing, 4th semester)
-          <h3>Coming soon.</h3>
-          Next generation sequencing (module: health informatics, 5th semester)
-          <h3>Coming soon.</h3>
-          <br />
-          <p>Unity game for module computer graphics (4th semester)<br />written in C# and deployed for Android.</p>
-
-          <br /> <br />
-          <a href="https://github.com/phamflam/happy-pengu-surf" target="_blank" rel="noopener noreferrer">
-            <video className="gif" playsInline autoPlay muted loop>
-              <source src={surfdemo_1} type="video/mp4"></source>
-            </video>
-          </a>
-          <a href="https://github.com/phamflam/happy-pengu-surf" target="_blank" rel="noopener noreferrer">
-            <video className="gif" playsInline autoPlay muted loop>
-              <source src={surfdemo_2} type="video/mp4"></source>
-            </video>
-          </a>
-          <a href="https://github.com/phamflam/happy-pengu-surf" target="_blank" rel="noopener noreferrer">
-            <video className="gif" playsInline autoPlay muted loop>
-              <source src={surfdemo_3} type="video/mp4"></source>
-            </video>
-          </a>
-          <a href="https://github.com/phamflam/happy-pengu-surf" target="_blank" rel="noopener noreferrer">
-            <video className="gif" playsInline autoPlay muted loop>
-              <source src={surfdemo_4} type="video/mp4"></source>
-            </video>
-          </a>
         </div>
         <div id="contact" className="screen">
           <h2>CONTACT.</h2>
