@@ -1,147 +1,77 @@
-import { Component } from 'react';
-import './App.css';
-// import Box from './components/Box';
-import SideNav from './components/SideNav';
+import * as React from "react";
+import IconButton from "@mui/material/IconButton";
+import Box from "@mui/material/Box";
+import CssBaseline from "@mui/material/CssBaseline";
 
-import surfdemo_1 from "./images/surfdemo_1.mp4"
-import surfdemo_2 from "./images/surfdemo_2.mp4"
-import surfdemo_3 from "./images/surfdemo_3.mp4"
-import surfdemo_4 from "./images/surfdemo_4.mp4"
-import mitosis_0 from "./images/mitosis_0.png"
-import mitosis_2 from "./images/mitosis_2.png"
-import mitosis_5 from "./images/mitosis_5.png"
+import { useTheme, ThemeProvider, createTheme } from "@mui/material/styles";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
+import MuiDrawer from "./components/MuiDrawer";
+import MuiInfoCard from "./components/MuiInfoCard";
 
-// import gude from "./images/gudetama.png"
-// import pengulynn from "../public/favicon.ico"
+const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <SideNav />
-        <div id="home" className="screen">
-          <h1>Lynn Pham</h1>
-          Welcome to my webportfolio made with React.js
-          <br /> <p style={{
-            color: "#A52A2A"
-          }}>(which is still in the making)</p>
-          <div >
-          </div>
-        </div>
-        {/* <div className="box"></div> */}
-        <div id="projects" className="screen">
-          <h2>PROJECTS.</h2>
-          You can find most of my projects on   <a className="link" href="https://github.com/phamflam" target="_blank" rel="noopener noreferrer" >GitHub</a>.
-          <br />  <br />
-          <p>Unity game for module computer graphics (4th semester)<br />written in C# and deployed for Android.</p>
-          <a href="https://github.com/phamflam/happy-pengu-surf" target="_blank" rel="noopener noreferrer">
-            <video className="gif" playsInline autoPlay muted loop>
-              <source src={surfdemo_1} type="video/mp4"></source>
-            </video>
-          </a>
-          <a href="https://github.com/phamflam/happy-pengu-surf" target="_blank" rel="noopener noreferrer">
-            <video className="gif" playsInline autoPlay muted loop>
-              <source src={surfdemo_2} type="video/mp4"></source>
-            </video>
-          </a>
-          <a href="https://github.com/phamflam/happy-pengu-surf" target="_blank" rel="noopener noreferrer">
-            <video className="gif" playsInline autoPlay muted loop>
-              <source src={surfdemo_3} type="video/mp4"></source>
-            </video>
-          </a>
-          <a href="https://github.com/phamflam/happy-pengu-surf" target="_blank" rel="noopener noreferrer">
-            <video className="gif" playsInline autoPlay muted loop>
-              <source src={surfdemo_4} type="video/mp4"></source>
-            </video>
-          </a>
-          <br /> <br />
-          Contacts manager application with React.js Node.js Express.js and MongoDB. (module: webapplication development, 4th semester)
-          <br />
-          <a href='https://github.com/phamflam/LYPH-WAD2021' target="_blank" rel="noopener noreferrer">
-            <br /><img className="img" alt="WAD" src="https://user-images.githubusercontent.com/63077827/145820729-1172c3e1-83a2-4c9d-b7da-a6f4ec61e7e7.png" /></a>
-          <br />
-          <br />
-          Mitosis detection with python jupyter notebooks (module: medical image processing, 4th semester)
-          <br />
-          <br />
-          <a href='https://github.com/phamflam/mitosis-detection/blob/master/mitosis_counter.ipynb' target="_blank" rel="noopener noreferrer">
-            <img className="img" alt="mitosis_5" src={mitosis_5} />
-            <img className="img" alt="mitosis_2" src={mitosis_2} />
-            <img className="img" alt="mitosis_0" src={mitosis_0} />
-          </a>
-          <br />
-          <br />
-          Viewer for whole slide images.(module: introduction to health informatics, 3rd semester)
-          <h3>Coming soon.</h3>
-          Next generation sequencing (module: health informatics, 5th semester)
-          <h3>Coming soon.</h3>
-        </div>
-        <div id="about" className="screen" >
-          <h2>ABOUT.</h2>
-          I study applied computer science at HTW Berlin.
-          <h5>HOBBIES.</h5>
-          <ul >
-            <li>playing piano</li>
-            <p>I started taking piano lessons in 2011. My favorite pieces are "One Summer's Day" and "Merry Go Round of Life" both by Joe Hisaishi.</p>
-            <li>cooking</li>
-            <p>I especially enjoy Vietnamese and Korean cuisine.</p>
-            <li>drawing</li>
-            <p>It started with simple manga characters,  I usually draw realistic portraits now.</p>
-          </ul>
-          <h5>INTERESTS.</h5>
-          <ul>
-
-            <li>anime, manga, webtoons</li>
-            <p>my top 3 Anime:
-              <ul>
-                <li>Samurai Champloo</li>
-                <li>Attack on Titan</li>
-                <li>Naruto</li>
-              </ul>
-            </p>
-            <p>my top 3 manga/manhwas:
-              <ul>
-                <li>Bastard</li>
-                <li>Uzumaki</li>
-                <li>Chainsaw Man</li>
-              </ul>
-            </p>
-            <li>music</li>
-            <p>According to my spotify wrapped, my top genre is korean RnB. But I also really like to listen to Lo-Fi and (k-)hiphop. <br />
-              Some of my favorite artists are:
-
-              <ul>
-                <li>BTS</li>
-                <li>BONES</li>
-                <li>Nujabes</li>
-                <li>Joji</li>
-              </ul>
-            </p><li>esports</li>
-            <p>League of Legends and Teamfight Tactics!</p>
-          </ul>
-          {/* <br />        <br /> */}
-        </div>
-        <div id="contact" className="screen">
-          <h2>CONTACT.</h2>
-          Contact me: <br /> <br />
-          <a style={{ "padding-right": 30 }} href="mailto: lynnphamthu@gmail.com" target="_blank" rel="noopener noreferrer" className="icon">Email</a>
-          {/* <br /> */}
-          <a style={{ "padding-right": 30 }} href="https://github.com/phamflam" target="_blank" rel="noopener noreferrer">
-            <img className="icon" alt="GitHub" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" />
-          </a>
-          {/* <br /> */}
-          <a style={{ "padding-right": 30 }} href="https://www.linkedin.com/in/lynn-pham-841876212/" target="_blank" rel="noopener noreferrer">
-            <img className="icon" alt="LinkedIn" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" />
-          </a>
-        </div>
-        <br />
-        <footer className="footer">
-          favicon made by melina
-        </footer>
-        {/* <Box /> */}
-      </div >
-    );
-  }
+function App() {
+  const theme = useTheme();
+  const colorMode = React.useContext(ColorModeContext);
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        width: "100%",
+        alignItems: "center",
+        justifyContent: "center",
+        bgcolor: "background.default",
+        color: "text.primary",
+        borderRadius: 1,
+        p: 3,
+      }}
+    >
+      {theme.palette.mode} mode
+      <IconButton
+        sx={{ ml: 1 }}
+        onClick={colorMode.toggleColorMode}
+        color="inherit"
+      >
+        {theme.palette.mode === "dark" ? (
+          <Brightness7Icon />
+        ) : (
+          <Brightness4Icon />
+        )}
+      </IconButton>
+    </Box>
+  );
 }
 
-export default App;
+export default function ToggleColorMode() {
+  const [mode, setMode] = React.useState("light");
+  const colorMode = React.useMemo(
+    () => ({
+      toggleColorMode: () => {
+        setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+      },
+    }),
+    []
+  );
+
+  const theme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode,
+        },
+      }),
+    [mode]
+  );
+
+  return (
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <App />
+        <MuiDrawer />
+        <MuiInfoCard />
+      </ThemeProvider>
+    </ColorModeContext.Provider>
+  );
+}
