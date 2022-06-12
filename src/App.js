@@ -21,6 +21,9 @@ import EmailIcon from "@mui/icons-material/Email";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ProgressBar from "./components/ProgressBar";
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
 function App() {
@@ -32,8 +35,11 @@ function App() {
       behavior: "smooth",
     });
   };
+
   return (
     <>
+      <ProgressBar />
+
       <Box
         sx={{
           display: "flex",
@@ -90,13 +96,16 @@ function App() {
       </div>
       <div id="about">
         <h2 className="titles">ABOUT</h2>
-        I study applied computer science at HTW Berlin.
+        I study applied computer science with specialization in health
+        informatics at HTW Berlin.
         <br />
+        <p>Hobbies: playing piano, reading mangas, video games, cooking </p>
+        <p>Interests: esports, webdev, data science</p>
       </div>
 
       <div id="projects" className="screen">
         <h2 className="titles">PROJECTS</h2>
-        You can find most of my projects on
+        You can find most of my projects on{" "}
         <Link
           href="https://github.com/phamflam"
           target="_blank"
