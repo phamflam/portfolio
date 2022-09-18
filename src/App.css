@@ -14,5 +14,31 @@
 }
 
 .titles {
-  color: cadetblue;
+  color: rgb(96, 157, 159);
+}
+
+a {
+  text-decoration-line: none !important;
+  color: rgb(96, 157, 159) !important;
+  font-weight: bolder !important;
+}
+
+a:hover {
+  color: rgb(96, 157, 159, 0.5) !important;
+}
+
+.grid-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style-position: inside;
+  list-style-type: square;
+  text-align: left;
+}
+
+.capgemini {
+  font-weight: bolder;
+  color: rgb(0, 112, 173);
+}
+.emphasis {
+  color: rgb(96, 157, 159);
 }

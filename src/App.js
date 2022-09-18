@@ -24,6 +24,11 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ProgressBar from "./components/ProgressBar";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
 function App() {
@@ -36,89 +41,193 @@ function App() {
     });
   };
 
+  function scrollTo(id) {
+    document.getElementById(id).scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+
   return (
-    <>
+    <div className="container">
       <ProgressBar />
 
-      <Box
-        sx={{
+      <List
+        id="head-navigation"
+        style={{
+          backgroundColor: "rgba(219,219,219,0.2)",
           display: "flex",
-          width: "100%",
-          alignItems: "center",
-          justifyContent: "center",
-          bgcolor: "background.default",
-          color: "text.primary",
-          borderRadius: 1,
-          p: 3,
+          flexDirection: "column",
+          position: "fixed",
+          left: 0,
+          bottom: 0,
         }}
       >
-        {theme.palette.mode} mode
-        <IconButton
-          sx={{ ml: 1 }}
-          onClick={colorMode.toggleColorMode}
-          color="inherit"
-        >
-          {theme.palette.mode === "dark" ? (
-            <Brightness7Icon />
-          ) : (
-            <Brightness4Icon />
-          )}
-        </IconButton>
-      </Box>
-
-      {/* <div id="head-navigation">
-        <List>
-          <ListItem>
-            <ListItemText>
-              <Link href="#start">Start</Link>
-            </ListItemText>
-            <ListItemText>
-              <Link href="#about">About</Link>
-            </ListItemText>
-            <ListItemText>
-              <Link href="#projects">Projects</Link>
-            </ListItemText>
-            <ListItemText>
-              <Link href="#contact">Contact</Link>
-            </ListItemText>
-          </ListItem>
-        </List>
-      </div> */}
-
-      <Divider />
+        <ListItem>
+          <Box>
+            {theme.palette.mode} mode
+            <IconButton
+              sx={{ ml: 1 }}
+              onClick={colorMode.toggleColorMode}
+              color="inherit"
+            >
+              {theme.palette.mode === "dark" ? (
+                <Brightness7Icon />
+              ) : (
+                <Brightness4Icon />
+              )}
+            </IconButton>
+          </Box>
+        </ListItem>
+        <ListItem>
+          <Link href="#start" onClick={() => scrollTo("start")}>
+            START
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link href="#about" onClick={() => scrollTo("about")}>
+            ABOUT
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link href="#experience" onClick={() => scrollTo("experience")}>
+            EXPERIENCE
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link href="#projects" onClick={() => scrollTo("projects")}>
+            PROJECTS
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link href="#contact" onClick={() => scrollTo("contact")}>
+            CONTACT
+          </Link>
+        </ListItem>
+      </List>
+      <br />
+      <br />
+      <br />
       <div id="top">
         <h1>
-          <ReactTypingEffect text={["Hello World!"]} />
+          <ReactTypingEffect text={["Hi, I'm Lynn.😊"]} />
         </h1>
-      </div>
-      <div id="start">
-        <h1>Lynn Pham</h1>
-      </div>
-      <div id="about">
-        <h2 className="titles">ABOUT</h2>
-        I study applied computer science with specialization in health
-        informatics at HTW Berlin.
         <br />
-        <p>Hobbies: playing piano, reading mangas, video games, cooking </p>
-        <p>Interests: esports, webdev, data science</p>
+      </div>
+      <div id="start"> {/*TODO: pfp */}</div>
+      <div id="about">
+        <Divider>
+          <h2 className="titles">ABOUT</h2>
+        </Divider>
+        <p>
+          I study applied computer science with specialization in health
+          informatics at HTW Berlin.
+        </p>
+        <br />
+        <h3>Skills</h3>
+        <ul className="grid-list" style={{}}>
+          <li>Java</li>
+          <li>Python</li>
+          <li>HTML & CSS</li>
+          <li> Javascript</li>
+          <li> TypeScript</li>
+          <li> SQL </li>
+          <li>Angular</li>
+          <li> Node</li>
+          <li> Git</li>
+        </ul>
+      </div>
+
+      <h3>Hobbies & Interests</h3>
+      <ul className="grid-list">
+        <li>playing piano</li>
+        <li>reading mangas</li>
+        <li>video games</li>
+        <li>cooking</li>
+        <li>crochet & knitting</li>
+        <li>Data Visualization</li>
+      </ul>
+      <div id="experience" className="screen">
+        <Divider>
+          <h2 className="titles">EXPERIENCE</h2>
+        </Divider>
+        {/*
+        <h3>Frontend Development Intern @ Capgemini</h3>
+        <p>March 2022 - May 2022</p>- Angular, TypeScript, HTML CSS, D3.js,
+        Visual Studio Code
+        <p>
+          Data Visualisation, building internal webapplication for data
+          insights,{" "}
+        </p>
+        <h3>Frontend Development Working Student @ Capgemini</h3>
+        <p>June 2022 - September 2022</p>- Angular, TypeScript, HTML CSS, Git,
+        Jira, Bitbucket, InteliJ Ultimate
+        <p>Improving UI Design of Message Simulator </p>
+        <p>UI Testing</p>
+      */}
+        <br />
+        <div>
+          <Accordion>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+              <Typography>
+                Frontend Development Intern @{" "}
+                <span className="capgemini">Capgemini</span>
+              </Typography>
+              <Typography
+                sx={{ marginLeft: "auto", marginRight: 0, opacity: 0.5 }}
+              >
+                March 2022 - May 2022
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                <p>Implementation of UI with Angular</p>
+                <p>Building Frontend of an in-house Webapplication</p>
+                <p>Data Visualization with D3.js</p>
+                <br />
+                <p style={{ color: "rgb(96, 157, 159, 0.5)" }}>
+                  Angular, TypeScript, HTML & CSS, D3.js, PostgresSQL, Visual
+                  Studio Code
+                </p>
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+              <Typography>
+                Frontend Development Working Student @{" "}
+                <span className="capgemini"> Capgemini </span>
+              </Typography>
+              <Typography
+                sx={{ marginLeft: "auto", marginRight: 0, opacity: 0.5 }}
+              >
+                June 2022 - September 2022
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                <p>Refactoring and Improving Angular Webapplication</p>
+                <p>UI Testing</p>
+                <br />
+                <p style={{ color: "rgb(96, 157, 159, 0.5)" }}>
+                  Angular, TypeScript, HTML CSS, Git, Jira, Bitbucket, InteliJ
+                  Ultimate
+                </p>
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+        </div>
       </div>
 
       <div id="projects" className="screen">
-        <h2 className="titles">PROJECTS</h2>
-        You can find most of my projects on{" "}
-        <Link
-          href="https://github.com/phamflam"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </Link>
-        .
-        <h3>
-          Unity game (computer graphics, 4th semester)
-          <br />
-          written in C# and deployed for Android.
-        </h3>
+        <Divider>
+          <h2 className="titles">PROJECTS</h2>
+        </Divider>
+        <h3>Unity Game deployed for Android</h3>
+        <p>computer graphics, 4th semester</p>
+        <p>Blender, Unity, C#, Visual Studio </p>
+        [TBD: description]
+        <br />
+        <br />
         <a
           href="https://github.com/phamflam/happy-pengu-surf"
           target="_blank"
@@ -155,12 +264,10 @@ function App() {
             <source src={surfdemo_4} type="video/mp4"></source>
           </video>
         </a>
-        <h3>
-          Contacts manager application (webapplication development, 4th
-          semester)
-          <br />
-          Techstack: (MERN) React.js Node.js Express.js & MongoDB
-        </h3>
+        <h3>Contacts manager application</h3>
+        <p>webapplication development, 4th semester</p>
+        <p> React.js Node.js Express.js MongoDB TypeScript </p>
+        <p>[TBD: description]</p>
         <a
           href="https://github.com/phamflam/LYPH-WAD2021"
           target="_blank"
@@ -173,12 +280,10 @@ function App() {
             src="https://user-images.githubusercontent.com/63077827/145820729-1172c3e1-83a2-4c9d-b7da-a6f4ec61e7e7.png"
           />
         </a>
-        <br />
-        <h3>
-          Mitosis detection (medical image processing, 4th semester) <br />
-          Python Jupyter Notebook
-        </h3>
-        <br />
+        <h3>Mitosis Detection</h3>
+        <p>medical image processing, 4th semester</p>
+        <p>Python, Jupyter Notebook</p>
+        [TBD: description]
         <a
           href="https://github.com/phamflam/mitosis-detection/blob/master/mitosis_counter.ipynb"
           target="_blank"
@@ -188,19 +293,21 @@ function App() {
           <img className="img" alt="mitosis_2" src={mitosis_2} />
           <img className="img" alt="mitosis_0" src={mitosis_0} />
         </a>
-        <h3>
-          Next Generation Sequencing (health informatics, 5th semester) <br />
-          Python, Tablet (viewer for next generation sequencing)
-        </h3>
-        <p>cant be shown :(</p>
+        <h3>Next Generation Sequencing</h3>
+        <p>health informatics, 5th semester</p>
+        <p>Python, Tablet (viewer for next generation sequencing)</p>
+        <p> [can not be shown yet☹️]</p>
         <p>
           Implementation of a tool in order to be able to make reliable
-          statements despite sequencing errors in the data set to suggest
-          antibiotics that can be used to treat four infections.
+          statements, despite sequencing errors in the data set, to suggest
+          antibiotics, that can be used to treat four different infections.
         </p>
       </div>
+
       <div id="contact" className="screen">
-        <h2 className="titles">CONTACT</h2>
+        <Divider>
+          <h2 className="titles">CONTACT</h2>
+        </Divider>
         <Link
           href="mailto: lynnphamthu@gmail.com"
           target="_blank"
@@ -227,7 +334,7 @@ function App() {
       <Button onClick={goToTop}>
         back up <ArrowUpwardIcon />
       </Button>
-    </>
+    </div>
   );
 }
 

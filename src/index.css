@@ -2,3 +2,15 @@ body {
   font-family: Verdana;
   text-align: center;
 }
+
+.container {
+  margin: 0 auto; /* this will center the page */
+  width: 900px; /*  use your width here */
+}
+
+/* hide scrollbar */
+/*
+body::-webkit-scrollbar {
+  display: none;
+}
+*/
