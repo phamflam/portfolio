@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.60312220.chunk.css",
-    "main.js": "/portfolio/static/js/main.7d5015ec.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.7d5015ec.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.858768be.chunk.css",
+    "main.js": "/portfolio/static/js/main.d99a6d4d.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.d99a6d4d.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.50701581.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.50701581.js.map",
     "static/js/2.3bf3caff.chunk.js": "/portfolio/static/js/2.3bf3caff.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.e9ea4542.chunk.js": "/portfolio/static/js/3.e9ea4542.chunk.js",
     "static/js/3.e9ea4542.chunk.js.map": "/portfolio/static/js/3.e9ea4542.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "static/css/main.60312220.chunk.css.map": "/portfolio/static/css/main.60312220.chunk.css.map",
+    "static/css/main.858768be.chunk.css.map": "/portfolio/static/css/main.858768be.chunk.css.map",
     "static/js/2.3bf3caff.chunk.js.LICENSE.txt": "/portfolio/static/js/2.3bf3caff.chunk.js.LICENSE.txt",
     "static/media/mitosis_0.2e5ef9fb.png": "/portfolio/static/media/mitosis_0.2e5ef9fb.png",
     "static/media/mitosis_2.5d8f2e9a.png": "/portfolio/static/media/mitosis_2.5d8f2e9a.png",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.50701581.js",
     "static/js/2.3bf3caff.chunk.js",
-    "static/css/main.60312220.chunk.css",
-    "static/js/main.7d5015ec.chunk.js"
+    "static/css/main.858768be.chunk.css",
+    "static/js/main.d99a6d4d.chunk.js"
   ]
 }
