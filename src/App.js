@@ -53,6 +53,7 @@ function App() {
 
       <List
         id="head-navigation"
+        className="nav-box"
         style={{
           backgroundColor: "rgba(219,219,219,0.2)",
           display: "flex",
@@ -246,6 +247,7 @@ function App() {
             <source src={surfdemo_2} type="video/mp4"></source>
           </video>
         </a>
+        <br />
         <a
           href="https://github.com/phamflam/happy-pengu-surf"
           target="_blank"

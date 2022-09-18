@@ -16,3 +16,12 @@ body::-webkit-scrollbar {
   display: none;
 }
 */
+@media only screen and (max-width: 850px) {
+  .nav-box {
+    display: none !important;
+  }
+
+  .grid-list {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
